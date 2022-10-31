@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #eee;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* 改变盒模型 */
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes x {
+            from {
+                transform: rotate(0dge);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #八卦 {
+            /* border: 1px solid red; */
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            animation: x 2s infinite linear;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+        }
+
+        @media(max-width:500px) {
+            #八卦 {
+                /* border: 1px solid red; */
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        #八卦>div:first-child {
+            /* border: 10px solid green; */
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background: black;
+        }
+
+        #八卦>div:nth-child(2) {
+            /* border: 10px solid blue; */
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background: white;
+        }
+
+        #八卦>div:nth-child(3) {
+            /* border: 10px solid yellow; */
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: black;
+        }
+
+        @media (max-width:500px) {
+            #八卦>div:nth-child(3) {
+                /* border: 10px solid yellow; */
+                width: 100px;
+                height: 100px;
+                margin-left: -50px;
+            }
+        }
+
+        #八卦>div:nth-child(4) {
+            
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        @media (max-width:500px) {
+            #八卦>div:nth-child(4) {
+                /* border: 10px solid yellow; */
+                width: 100px;
+                height: 100px;
+                margin-left: -50px;
+            }
+        }
+        #八卦>div:nth-child(5) {
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            top: 75px;
+        }
+        @media (max-width:500px) {
+            #八卦>div:nth-child(5) {
+                /* border: 1px solid red; */
+                width: 25px;
+                height: 25px;
+                top: 37.5px;
+                margin-left: -12.5px;
+            }
+        }
+
+        #八卦>div:nth-child(6) {
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: black;
+            bottom: 75px;
+        }
+        @media (max-width:500px) {
+            #八卦>div:nth-child(6) {
+                /* border: 10px solid yellow; */
+                width: 25px;
+                height: 25px;
+                bottom: 37.5px;
+                margin-left: -12.5px;
+            }
+        }
+
+
+        #八卦-wrapper {
+            /* border: 10px solid red; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #八卦-描述 {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="八卦-wrapper">
+        <div id="八卦">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="八卦-描述">道可道，非常道</div>
+    </div>
+</body>
+
+</html>
